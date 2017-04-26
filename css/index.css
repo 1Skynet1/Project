@@ -1,0 +1,36 @@
+/*--------------------------default style-------------------------------------*/
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+a { text-decoration: none; color: #b5b6b8; font-size: 13px; }
+
+em, i, strong, b, h1, h2, h3, h4, h5, h6 { font-style: normal; }
+
+/*--------------------------default style-------------------------------------*/
+html { width: 100%; height: 100%; }
+
+body { width: 100%; }
+
+#header { width: 100%; background: #171a21; }
+#header .header_content { width: 708px; height: 103px; position: relative; margin: 0 auto; }
+#header .header_content .logo { width: 150px; height: 74px; padding-top: 30px; }
+#header .header_content .nav { position: absolute; left: 200px; top: 0; width: 180px; height: 68px; }
+#header .header_content .nav .frist_nav { height: 100%; }
+#header .header_content .nav .frist_nav li { padding: 46px 15px 7px 0px; float: left; }
+#header .header_content .nav .frist_nav li a:hover { color: #fff; }
+#header .header_content .nav .frist_nav #Store { position: relative; }
+#header .header_content .nav .second_nav_1 { position: absolute; left: 0px; top: 64px; z-index: 20; }
+#header .header_content .header_right { width: 205px; float: right; position: absolute; right: 0; top: 6px; }
+#header .header_content .header_right .inst_btn { float: left; width: 98px; height: 21px; background: url(../img/logo_icon/btn_icon.png) repeat center center; text-align: center; }
+#header .header_content .header_right .inst_btn .inst_steam { width: 24px; height: 100%; background: url(../img/logo_icon/installsteam_btn.png) no-repeat left top; text-indent: -100%; overflow: hidden; float: left; }
+#header .header_content .header_right .inst_btn i a { color: #e5e5e5; }
+#header .header_content .header_right .inst_btn i a:hover { color: #fff; }
+#header .header_content .header_right .login_and_language { float: left; }
+#header .header_content .header_right .login_and_language li { float: left; }
+#header .header_content .header_right .login_and_language li a:hover { color: #fff; }
+#header .header_content .header_right .login_and_language li:nth-of-type(1) a { padding: 0 13px 0 10px; border-right: 1px solid #b5b6b8; }
+#header .header_content .header_right .login_and_language li:nth-of-type(2) { padding: 0 10px 0 10px; position: relative; }
+#header .header_content .header_right .login_and_language li:nth-of-type(2) span { position: absolute; right: 0; top: 50%; text-indent: -100%; overflow: hidden; float: left; width: 0; height: 0; border: 4px solid #171a21; border-top-color: #b5b6b8; }
+
+/*# sourceMappingURL=index.css.map */
