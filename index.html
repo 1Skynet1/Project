@@ -5,9 +5,9 @@
 		<title>欢迎来到 Steam</title>
 <link href="favicon.ico" rel="icon" type="image/x-icon" />
 <link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
 <script type="text/javascript" src="js/index.js" ></script>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
-	</head>
+</head>
 	<body>
 		<div id="header">
 			<div class="header_content">
@@ -18,7 +18,7 @@
 			<div class="nav">
 				<ul class="frist_nav">
 					<li id="Store"><a href="#">商店</a></li>
-					<li><a href="#">社区</a></li>
+					<li id="community"><a href="#">社区</a></li>
 					<li><a href="#">关于</a></li>
 					<li><a href="#">客服</a></li>
 				</ul>
@@ -30,7 +30,7 @@
 						<li><a href="#">新闻</a></li>
 						<li><a href="#">统计</a></li>
 					</ul>
-					<!--
+					
 					<ul class="second_nav_2">
 						<li><a href="#">主页</a></li>
 						<li><a href="#">讨论</a></li>
@@ -38,15 +38,15 @@
 						<li><a href="#">青昧之光</a></li>
 						<li><a href="#">市场</a></li>
 						<li><a href="#">实况直播</a></li>
-					</ul>-->
+					</ul>
 			</div>
 			<div class="header_right">
 			<div class="inst_btn"><a href="#"><span class="inst_steam">111</span></a><i><a href="#">安装 Steam</a></i></div>
 				<ul class="login_and_language">
 					<li><a href="">登陆</a></li>
-					<li><a href="">语言</a><span>111</span></li>
+					<li id="Language"><a>语言</a><span>111</span></li>
 				</ul>
-				<!--<ul id="Language_list">
+				<ul id="Language_list">
 					<li><a href="#">Dansk(丹麦语)</a></li>
 					<li><a href="#">Nederlands(荷兰语)</a></li>
 					<li><a href="#">Englash(英语)</a></li>
@@ -60,12 +60,63 @@
 					<li><a href="#">简体中文(简体中文)</a></li>
 					<li><a href="#">繁體中文(繁體中文)</a></li>
 					<li><a href="#">帮助我们翻译Steam</a></li>
-				</ul>-->
+				</ul>
 			</div>
 		</div>
-		<div id="banner"></div>
+</div>
 		<div id="main">
-			<div id="main_content"></div>
+			<div class="main_top">
+				<div class="left_list">
+				<h5 class="list_title">推荐</h5>
+				<ul class="list_1 list_nav">
+					<li class="firend"><span>fir</span><a href="">由好友推荐</a></li>
+					<li><span class="judge">judge</span><a href="">由鉴赏家推荐</a></li>
+					<li><span class="lable">label</span><a href="">标签</a></li>
+				</ul>
+				<h5 class="list_title">探索队列</h5>
+				<ul class="list_1 list_nav">
+					<li><span class="recom">recom</span><a href="">推荐</a></li>
+					<li><span class="new">new</span><a href="">新品</a></li>
+				</ul>
+				<h5 class="list_title">浏览分类</h5>
+				<ul class="list_1 list_nav">
+					<li><span class="re">re</span><a href="">热销商品</a></li>
+					<li><span class="geng">geng</span><a href="">最近更新</a></li>
+					<li><span class="xin">xin</span><a href="">新品</a></li>
+					<li><span class="tui">tui</span><a href="">即将推出</a></li>
+					<li><span class="sale">sale</span><a href="">优惠</a></li>
+					<li><span class="VR">VR</span><a href="">虚拟现实</a></li>
+					<li><span class="St_col">St_col</span><a href="">Steam控制器</a></li>
+				</ul>
+				<h5 class="list_title">按类型浏览</h5>
+				<ul class="list_2 list_nav">
+					<li><a href="">免费</a></li>
+					<li><a href="">抢先体验</a></li>
+					<li><a href="">休闲</a></li>
+					<li><a href="">体育</a></li>
+					<li><a href="">冒险</a></li>
+					<li><a href="">大型多人在线</a></li>
+					<li><a href="">动作</a></li>
+					<li><a href="">模拟</a></li>
+					<li><a href="">独立</a></li>
+					<li><a href="">竞速</a></li>
+					<li><a href="">策略</a></li>
+					<li><a href="">角色扮演</a></li>
+				</ul>
+			</div>
+				<div class="right_box">
+					<ul class="main_nav">
+						<li class="store"><a href="#">您的商店<span class="sanjiao s1">111</span></a></li>
+						<li><a href="#">游戏<span class="sanjiao s2">111</span></a></li>
+						<li><a href="#">软件<span class="sanjiao s3">111</span></a></li>
+						<li><a href="#">硬件<span class="sanjiao s4">111</span></a></li>
+						<li><a href="#">视频<span class="sanjiao s5">111</span></a></li>
+						<li class="news"><a href="#">新闻</a></li>
+					</ul>
+					<input type="text" id="search" placeholder="搜索商店" />
+				</div>
+			</div>
+			 
 		</div>
 		<div id="footer"></div>
 	</body>
