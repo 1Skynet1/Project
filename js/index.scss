@@ -19,7 +19,7 @@ $list_nav_color:#84b6d9;
         margin:0 auto;  
 };
 @mixin text_none{
-    text-indent: -100%;
+    text-indent: -1000px;
     overflow: hidden;
     float: left;
 }
@@ -34,15 +34,18 @@ html{
     height:100%;
 }
  body{
-      width:100%;
+      min-width:1440px;
+      overflow:auto;
+
 }
 /*--------------------------header style-------------------------------------*/
 #header{
     width: 100%;
     background: $headerBgcolor;
         .header_content{
-            width:72%;
+            width:940px;
             height:103px;
+            margin:0 auto;
             position:relative;
             @include margin_this;
             .logo{
@@ -186,7 +189,6 @@ html{
 
 /*--------------------------main style-------------------------------------*/
 #main{
-    
     width:100%;
     height:3875px;
     background:#1b2838;
@@ -250,15 +252,16 @@ html{
         }
     }
     .right_box{
+        min-width: 940px;
         position:relative;
         @include Dleft;
-        width:70%;
+        width:940px;
         height:36px;
         background:#356b8f;
-        margin:32px 0 0 46px;
+        margin:32px 0 0 63px;
             .main_nav{
                 
-                width:56%;
+                width:940px;
                  @include Dleft;
                 li{
                     cursor:pointer;
@@ -271,11 +274,11 @@ html{
                      @include Dleft;
                      a{
                          line-height:35px;
-                         
-                         
+                         color:#fff;
                      }
                 }
                 .store{
+                    
                     width:97px;
                 }
                 .news{
@@ -293,8 +296,7 @@ html{
                 }
                 .s1{position:absolute;right:20px;top:16px;}
                 .s2,.s3,.s4,.s5{position:absolute;right:18px;top:16px;}
-            }
-             input[type="text"]{
+                input[type="text"]{
                  background:#316282;
                 position:absolute;
                 right:3px;
@@ -305,7 +307,85 @@ html{
                 height:30px;
                 border:1px solid #204560;
                 border-radius:5px;
+                }
+            }
+             .hr{
+                        display: block;
+                        width:85px;
+                        height:1px;
+                        margin:5px 10px 5px 10px;
+                        background:#fff;
+                        @include text_none;
+                    }
+             .bot{padding-top:11px}
+              .second_menu{
+                    padding-top:1px;
+                    position:absolute;
+                    top:36px;
+                    background:linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+                    z-index: 10;
+                    li{
+                        a{
+                           
+                           height:16px;
+                           line-height:16px;
+                           padding: 5px 12px;
+                           display:block;
+                           color:#171A21;
+                           font-size:13px;
+                           text-align:left;
+                        }
+                        a:hover{
+                            background:#000;
+                            color:#fff;
+                        }
+                    }
+                    .category{
+                        font-size:11px;
+                        color:#4f94bc;
+                        padding:2px 12px 3px 12px;
+                    }
+                }
+                .your_store{
+                    left:0;
+                    width:113px;
+                    height:120px;
+                    display:none;
+                }
+                .game_list{
+                    left:113px;
+                    width:138px;
+                    height:550px;
+                    display:none;
+                    .hr{
+                       width:108px;
+                   }
+                }
+                .softwore_list{
+                    left:199px;
+                    width:125px;
+                    height:277px;
+                    display:none;
+                    .hr{
+                        width:95px;
+                        }
+                    }
+                .hardware_list{
+                    left:286px;
+                    width:115px;
+                    height:110px;
+                    display:none;
+                }
+                .video_list{
+                    left:373px;
+                    width:106px;
+                    height:405px;
+                    display:none;
+                    .hr{
+                        width:76px;
+                        text-align: center;
+                        }
+                }
         }
     }
-  }
 }
