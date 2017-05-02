@@ -40,8 +40,6 @@ $(function(){
 		function(){
 		$("#Language_list").fadeOut(150);	
 		});
-	
-	
 	$(".store,.game,.software,.hardware,.video").on("mouseenter",function(){
 		$(".right_box>ul").css("display","none");
 		$(".right_box>ul:first").css("display","block");

@@ -23,6 +23,37 @@ $list_nav_color:#84b6d9;
     overflow: hidden;
     float: left;
 }
+@mixin h4_title{
+    width:850px;
+    height: 20px; 
+    color: #f8ffff; 
+    font-size: 16px; 
+    letter-spacing: 4px; 
+    font-weight: normal;
+    padding-top:20px; 
+    padding-bottom:10px;
+    font-family: "Motiva Sans", Sans-serif;
+}
+@mixin show_All{
+    position:absolute;
+    right:2px;
+    top:18px;
+    width:80px;
+    height:22px;
+    border:1px solid #fff;
+    border-radius:2px;
+    display:inline-block;
+    text-align: center;
+    line-height: 22px;
+    color:#f8ffff;
+}
+@mixin show_All_a{
+    display: block;
+    width:100%;
+    height:100%;
+    color:#fff;
+    font-size:12px;
+}
 /*--------------------------default style-------------------------------------*/
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary{margin:0;padding:0;}
 li{list-style: none;}
@@ -31,9 +62,11 @@ em,i,strong,b,h1,h2,h3,h4,h5,h6{font-style: normal;}
 /*--------------------------default style-------------------------------------*/
 html{
     width:100%;
-    height:100%;
+ 
 }
  body{
+      
+      width:100%;
       min-width:1440px;
       overflow:auto;
 
@@ -190,7 +223,7 @@ html{
 /*--------------------------main style-------------------------------------*/
 #main{
     width:100%;
-    height:3875px;
+    height:3200px;
     background:#1b2838;
    .main_top{
        width:100%;
@@ -260,8 +293,44 @@ html{
         height:36px;
         background:#356b8f;
         margin:32px 0 0 63px;
+        .left_Arrow{
+                        width:45px;
+                        height:108px;
+                        background:linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+                        position:absolute;
+                        left:-46px;
+                        top:130px;
+                        cursor:pointer;
+                        span{
+                            display:block;
+                            width:23px;
+                            height:36px;
+                            background:url(../img/logo_icon/arrows.png)no-repeat -23px 0;
+                            @include text_none;
+                            margin:36px 13px;
+                            cursor:pointer;
+                        }
+        }
+                    .Right_Arrow{
+                         width:45px;
+                        height:108px;
+                        background:linear-gradient( to left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+                        position:absolute;
+                        right:46px;
+                        top:130px;
+                        cursor:pointer;
+                        span{
+                            display:block;
+                            width:23px;
+                            height:36px;
+                            background:url(../img/logo_icon/arrows.png)no-repeat 0 0;
+                            @include text_none;
+                            margin:36px 13px;
+                            cursor:pointer;
+                        }
+                    }
             .main_nav{
-                
+                cursor:pointer;
                 width:940px;
                  @include Dleft;
                 li{
@@ -305,6 +374,7 @@ html{
                 .s2,.s3,.s4,.s5{position:absolute;right:18px;top:16px;}
                 input[type="text"]{
                  background:#316282;
+                 color:#e5e5e5;
                 position:absolute;
                 right:3px;
                 top:2px;
@@ -323,7 +393,7 @@ html{
                     height:25px;
                     border:none;
                     cursor:pointer;
-                    background:url(../img/logo_icon/search_icon.png)no-repeat center center;
+                    background:url(../img/logo_icon/search_icon_1.png)no-repeat center center;
                 }
             }
              .hr{
@@ -400,13 +470,14 @@ html{
                         }
                 }
             .banner{
-                h4{
+                position:relative;
+                h5{
                     height:20px; 
                     color:#fff;
                     font-size:14px;
                     letter-spacing:4px;
                     font-weight:normal;
-                    padding-top:60px;
+                    margin-top:60px;
                     font-family: "Motiva Sans", Sans-serif;
                 } 
                 .banner_box{
@@ -416,7 +487,7 @@ html{
                     padding-top:10px;
                     .bann_img{
                         width:616px;
-                        height:356px;
+                        height:356.5px;
                         cursor:pointer;
                         @include Dleft;
                       img{
@@ -433,13 +504,15 @@ html{
                         border:1px solid #171A21;
                         box-shadow:2px 3px 2px 1px #000;
                         @include Dleft;
-                        h4{
+                        h3{
                             width:302px;
                             height:52px;
                             font-weight:normal;
-                            font-size:22px;
+                            font-size:21px;
                             line-height:26px;
                             padding:8px 0 10px 10px;
+                            margin:0;
+                            color:#FFFFFF;
                             cursor:pointer;
                         }
                         .images{
@@ -495,13 +568,738 @@ html{
                             cursor:pointer;
                         }
                     }
-                    .left_Arrow{
+                    .peas{
+                        position:absolute;
+                        bottom:5px;
+                        left:34%;
+                        width:470px;
+                        height:30px;
+                        margin:0 auto;
+                        div{
+                            width:15px;
+                            height:9px;
+                            @include text_none;
+                            background-color:#49535f;
+                            margin:12px 0 0 5px;
+                            border-radius:2px;
+                            text-align: center;
+                            cursor:pointer;
+                           
+                        }
+                    }
+                }
+                .box{
+                 position:absolute;
+                 right:-290px;
+                 top:85px;
+                .detailsDiv{   
+                    width:306px;
+                    height:360px;
+                    position:relative;
+                    display:none;
+                     background:linear-gradient(to bottom, rgba( 255, 232, 238, 1) 5%,rgba( 198, 215, 222, 1) 95%);
+                     z-index:20;
+                     
+                    h5{
+                        width:225px;
+                        height:45px;
+                        font-weight: normal;
+                        font-size:14px;
+                        color:#242e3a;
+                        padding:16px 0 0 17px;
+                        cursor: pointer;
+                        margin:0;
+                    }
+                    .data{
+                        width:260px;
+                        display:block;
+                        padding-top:6px;
+                        font-size:12px;
+                        color:#364451;
+                        padding-left:17px;                        
+                    }
+                    .describeof{
+                        font-size:11px;
+                        color:#364451;
+                        line-height: 15px;
+                        padding:11px 27px 9px 16px;
+                    }
+                    .assess{
+                        margin:0 auto;
+                        width:274px;
+                        height:34px;
+                        background:#6a7885;
+                        font-size:11px;
+                        color:#c6d4df;
+                        padding:4px 0 0 4px;
+                        border-radius:4px;
+                        i{
+                            color:#74bbe5;
+                            cursor: pointer;
+                        }
+                    }
+                    .platform{
+                        width:28px;
+                        height:28px;
+                        background:#96a2ae;
+                        border-radius:3px;
+                        margin:10px  0 0 15px;
+                        float:left;
+                        cursor: pointer;
+                        span{
+                            @include text_none;
+                            width:20px;
+                            height:20px;
+                            background:url(../img/logo_icon/icon_win.png)no-repeat center center;
+                            margin:4px 0 0 4px;
+                            cursor: pointer;
+                        }
+                    }
+                    .type{
+                        width:92px;
+                        height:28px;
+                        background:#96a2ae;
+                        border-radius:3px;
+                        margin-left: 47px;
+                        margin-top:10px;
+                        span{
+                            width:22px;
+                            height:15px;
+                            @include text_none;
+                            float:left;
+                            margin:7px 1px 0 5px;
+                            cursor: pointer;
+                        }
+                        .one{background:url(../img/logo_icon/one.jpg)no-repeat center center;}
+                        .doub{background:url(../img/logo_icon/doub.png)no-repeat center center;}
+                        .team{background:url(../img/logo_icon/team.jpg)no-repeat center center;}
+                    }
+                   .tag{
+                       font-size:11px;
+                       color:#334454;
+                       margin-left:15px;
+                   }
+                   .tagDiv{
+                       width:260px;
+                       height:20px;
+                       margin-left:15px;
+                       span{
+                           height:19px;
+                           font-size:11px;
+                           background:#96a2ae;
+                           color:#fff;
+                           padding:0 2px;
+                           margin-right:2px;
+                           border-radius:2px;
+                           text-align:center;
+                       }
+                   }
+                   .jiao{
+                    @include text_none;
+                    width:0;
+                    height:0;
+                    border:10px solid rgba(0,0,0,0);
+                    border-right-color:#ffe8ee;
+                    position:absolute;
+                    left:-18px;
+                    top:8px;
+                   }
+                }
+              } 
+            }
+            .title_info{
+                width:100%;
+                position:relative;
+             h4{
+                 @include h4_title;
+                }
+                .showAll{
+                    @include show_All;
+                    @include Dright;
+                    a{
+                        @include show_All_a;
+                        
+                    }
+                }
+            }
+            .sale{
+                position:relative;
+                width:940px;
+                height:430px;
+                
+                .game_info{
+                    position:relative;
+                    width:306px;
+                    height:390px;
+                    @include Dleft;
+                    h5{
+                        margin:0 0 10px;
+                        color:#fff;
+                        font-size:15px;
+                        letter-spacing:2px;
+                        font-weight:normal;
+                        padding:8px 0 0 10px;
+                    }
+                    p{
+                        font-family: "Motiva Sans", Sans-serif;
+                        font-weight: 300;
+                        color:#acdbf5;
+                        font-size:12px;
+                        padding:0 0 0 10px;
+                    }
+                    .mart{
+                            width:75px;
+                            height:34px;
+                            font-size:26px;
+                            padding:0 5px;
+                            color:#a4d007;
+                            background:#4c6b22;
+                            @include Dleft;
+                            margin:8px 0 0 10px;
+                    }
+                    .price{
+                            width:49px;
+                            height:34px;
+                            background-color: rgba(0,0,0,0.6);
+                            line-height:13px;
+                             @include Dleft;
+                            text-align:center;
+                            margin:8px 0 0 0;  
+                    }
+                    .old_price{
+                            width:32px;
+                            height:13px;
+                            text-decoration: line-through;
+                            font-size:11px;
+                            color:#7193a6;
+                            margin-top:4px;
+                    }
+                    .now_price{
+                            width:32px;
+                            height:13px;
+                            font-size:11px;
+                            color:#acdbf5;
+                    }
+                  .gameinfo1{
+                      position:absolute;
+                      bottom:0;
+                      left:0;
+                      width:306px;
+                      height:110px;
+                      background:url(../img/sale_Img/background_spotlight.jpg)no-repeat left top;
+                      z-index:10;
+                  }
+                }
+                .game1{
+                    margin:0 11px;
+                    .gameinfo1{
+                        width:306px;
+                        height:70px;
+                    }
+                }
+                .game_info1{
+                    width:306px;
+                    height:187px;
+                    @include Dleft;
+                    a{
+                       display:block;
+                       width:306px;
+                       height:134px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    .mart{
+                            position:absolute;
+                            right:54px;
+                            bottom:5px;
+                            width:75px;
+                            height:34px;
+                            font-size:26px;
+                            padding:0 5px;
+                            color:#a4d007;
+                            background:#4c6b22;
+                            @include Dleft;
+                            margin:8px 0 0 10px;
+                    }
+                    .price{
+                            position:absolute;
+                            right:5px;
+                            bottom:5px;
+                            width:49px;
+                            height:34px;
+                            background-color:rgba(0, 0, 0, 0.6);
+                            line-height:13px;
+                             @include Dleft;
+                            text-align:center;
+                            margin:8px 0 0 0;  
+                    }
+                    .old_price{
+                            width:32px;
+                            height:13px;
+                            text-decoration: line-through;
+                            font-size:11px;
+                            color:#7193a6;
+                            margin-top:4px;
+                    }
+                    .now_price{
+                            width:32px;
+                            height:13px;
+                            font-size:11px;
+                            color:#acdbf5;
+                    }
+                    .gameinfo1{
+                      position:relative;
+                      width:306px;
+                      height:50px;
+                      background:linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);
+                      z-index:10;
+                      .price2{
+                              background:#161f2e;
+                          }
+                      .saleNow{
+                          width:122px;
+                          height:44px;
+                          @include Dleft;
+                          .info{
+                              color:#1D2227;
+                              width:108px;
+                              height:15px;
+                              font-size:12px;
+                              margin-left:5px;
+                          }
+                          .time{
+                              width:56px;
+                              height:13px;
+                              background:#4f95bd;
+                              font-size:11px;
+                              color:#c4e4f2;
+                              padding:0 5px;
+                              margin-left:5px;
+                          }
+                      }
+                  }                  
+                }
+                .game2{
+                      margin-top:15px;
+                      .gameinfo1{
+                       background:url(../img/sale_Img/background_spotlight.jpg) no-repeat left top;
+                      }
+                  }
+                  .Right_Arrow1{
+                      right:-46px;
+                  }
+                 .peas1{
+                        position:absolute;
+                        bottom:10px;
+                        left:48%;
+                        width:470px;
+                        height:30px;
+                        margin:0 auto;
+                        div{
+                            width:15px;
+                            height:9px;
+                            @include text_none;
+                            background-color:#49535f;
+                            margin:12px 0 0 5px;
+                            border-radius:2px;
+                            text-align: center;
+                            cursor:pointer;
+                           
+                        }
+                    }
+            }
+            .browse_Steam{
+                width:940px;
+                height:170px;
+                vertical-align: middle;
+                h4{
+                    @include h4_title;
+                }
+                .box_bor{
+                    width:940px;
+                    height:110px;
+                    li{
+                        @include Dleft;
+                        width:224px;
+                        height:58px;
+                        background:url(../img/logo_icon/browse_Steam_Bg.jpg)no-repeat center center;
+                        border:1px solid #0f1923;
+                        border-radius:6px;
+                        margin-right:8px;
+                        a{
+                            display: block;
+                            width:100%;
+                            height:100%;
+                            font-size:18px;
+                            color:#6dbbfb;
+                            text-align:center;
+                            line-height:58px;
+                        }
+                       .User_Tag{
+                           margin:0;
+                       }
+                    }
+                }
+            }
+            .appreciate{
+                position:relative;
+                h4{
+                 @include h4_title;
+                 padding-bottom:0px;
+                }
+                p{
+                  width:434px;
+                  height:17px;
+                  font-size:12px;
+                  color:#c6d4e1;  
+                }
+                .showAll{
+                    @include show_All;
+                    top:20px;
+                    a{
+                       @include show_All_a;
+                    }
+                }
+                .app_Box{
+                    width:940px;
+                    height:190px;
+                    margin-top:5px;
+                    .margin_box{
+                            margin:0 7px;
+                        }
+                    .apps{
+                        width:308px;
+                        height:90px;
+                        background:linear-gradient(-65deg,rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%);
+                        @include Dleft;
+                        margin-bottom:7px;
+                        .app_logo{
+                            width:65px;
+                            height:65px;
+                            border-radius:1px solid rgba(0,0,0,0);
+                            @include Dleft;
+                            margin:2px 10px;
+                        }
+                        .app_tit{
+                                margin-top:10px;
+                                font-size:12px;
+                                color:#f8ffff;
+                        }
+                        .app_msg{
+                                font-size:12px;
+                                color:#b0d8f2;
+                                font-style:italic;
+                                margin-right:10px;
+                        } 
+                    }
+                    
+                }
+            }
+        }
+    }
+
+   .main_bottom{
+       position:relative;
+       width:100%;
+       height:auto;
+       background:linear-gradient(to bottom, #2a465c 5%, #1b2838 95%);
+       .main_bot_nav{
+           position:absolute;
+           left:18.5%;
+           top:-38px;
+           width:940px;
+           height:38px;
+           li{
+               width:75px;
+               height:100%;
+               @include Dleft;
+               border-radius:3px;
+               a{
+                  display:block;
+                  width:100%;
+                  height:100%;
+                  font-size:14px;
+                  color:#678ca6;
+                  text-align:center;
+                  line-height:38px;
+               }
+           }
+       }
+       .main_bot_content{
+           width:950px;
+           margin:0 auto;
+           .product_list{
+               width:630px;
+               height:740px;
+               padding-top:9px;
+               .default{
+                   background:#95bbd4;
+                   z-index:20;
+                   padding-right:20px;
+                   dd{
+                   color:#000;
+                   }
+                   dl{
+                      .price3{
+                          margin-right:20px;
+                          .now_price{
+                              color:#000;
+                          }
+                      }
+                   }
+               }
+               li{
+                   position:relative;
+                   width:630px;
+                   height:70px;
+                   background:rgba( 0, 0, 0, 0.2 );
+                   margin-bottom:5px;
+                   cursor:pointer;
+                   dl{
+                       
+                       width:630px;
+                       height:70px;
+                       dt{
+                          width:186px;
+                          height:69px;
+                          @include Dleft;
+                          img{
+                              width:100%;
+                              height:100%;
+                          } 
+                       }
+                       dd{
+                         @include Dleft;
+                         font-size:13px;
+                         color:#ccd4d7;
+                         margin:8px 0 0 15px;
+                       }
+                       .dev{
+                           width:20px;
+                           height:20px;
+                           display:block;
+                           .win{
+                               position:absolute;
+                               left:184px;
+                               top:26px;
+                               width:20px;
+                               height:20px;
+                               background:url(../img/logo_icon/icon_win.png)no-repeat center center;
+                               margin-left:15px;
+                               @include text_none;
+                           }
+                       }
+                       .tage{  
+                               position: absolute;
+                               bottom:6px;
+                               left:202px;  
+                               width:300px;
+                               height:14px;
+                               font-size:11px;
+                               color:#384959;
+                       }
+                       .sale{
+                           width:40px;
+                           height:20px;
+                           background:#4c6a22;
+                           color:#9dce27;
+                           position:absolute;
+                           right:95px;
+                           height:25px;
+                           padding:0 4px;
+                       }
+                      .price3{
+                          width:35px;
+                          height:35px;
+                          @include Dright;
+                          position:absolute;
+                          right:15px;
+                          top:18px;
+                          text-align:right;
+                       .old_price{
+                           display:block;
+                            width:32px;
+                            height:13px;
+                            text-decoration: line-through;
+                            font-size:12px;
+                            color:#7193a6;
+                         }
+                     .now_price{
+                            display:block;
+                            width:32px;
+                            height:13px;
+                            font-size:12px;
+                            color:#acdbf5;
+                        }
+                    .price_align{
+                        margin-top:9px;
+                    }
+                  }
+                 }
+               }
+           }
+           .right_list{
+               width:308px;
+               height:743px;
+               background:linear-gradient( to right, #95bbd4 5%,#859bac 95%);
+               position:absolute;
+               right:278px;
+               top:9px;
+               h5{
+                    text-transform: none;
+                    font-size: 21px;
+                    letter-spacing: 0px;
+                    color: #263645;
+                    height: 30px;
+                    margin:15px 0 8px 15px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+               }
+               .assess{
+                       padding: 5px 7px;
+                       margin-bottom: 10px;
+                       background-color: rgba( 38, 54, 69, 0.6);
+                       width: 258px;
+                       border-radius: 2px;
+                       margin:0 auto;
+                    p{
+                        font-size:12px;
+                        color:#C6D4DF;
+                        font-family: Arial, Helvetica, sans-serif; 
+                    }
+                    i{
+                        font-size:12px;
+                        color:#C6D4DF;
+                        font-family: Arial, Helvetica, sans-serif;  
+                    }
+                    span{
+                        font-size:12px;
+                        color:#66C0F4;
+                        font-family: Arial, Helvetica, sans-serif; 
+                        cursor:pointer;
+                    }
+                    
+               }
+               .game_tage{
+                    margin-left:18px;
+                   li{
+                        display: inline-block;
+                        line-height: 19px;
+                        padding: 0 7px;
+                        background-color: rgba(38, 54, 69, 0.6);
+                        box-shadow: none;
+                        margin-right: 2px;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        margin:5px 0 3px 0;
+                        max-width: 200px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 11px; 
+                   }
+               }
+               .img_list{
+                   
+                   li{
+                        width: 280px;
+                        height: 145px;
+                        margin:3px auto;
+                        img{  
+                            width:100%;
+                            height:100%; 
+                         }                   
+                   
+                   }
+                }
+           }
+           .bottom_div{
+            width:630px;
+            height:35px;
+            background:rgba( 0, 0, 0, 0.2 );
+            margin-top:10px;
+            position:relative;
+            .more{
+                position:absolute;
+                right:60px;
+                top:10px;
+                font-size:12px;
+                color:#fff;
+            }
+             .news_product{
+                 @include show_All;
+                 top:6px;
+                 right:5px;
+                 width:50px;
+                 a{
+                   @include show_All_a;
+                 }
+             }
+           }
+        .be_lower{
+            position:relative;
+            width:950px;
+            height:250px;
+            margin:30px auto;
+           h4{
+              @include h4_title;
+           }
+           .lower{
+               @include show_All;
+               a{
+                 @include show_All_a;   
+               }
+           }
+           .lower40{
+               right:95px;
+           }
+           ul{
+               width:960px;
+               height:130px;
+               li{
+                   width:230px;
+                   @include Dleft;
+                   margin-right:10px;
+                   div{
+                      width:230px;
+                      height:130px;
+                       img{
+                           width:100%;
+                           height:100%;
+                       }
+                   }
+                   .tage{
+                       height:28px;
+                       background:#355c7b;
+                       text-align: right;
+                       box-shadow:0 0 5px #000;
+                       span{
+                           width:43px;
+                           font-size:11px;
+                           height:18px;
+                           display: inline-block;
+                           background-color: rgba(20,31,44,0.4);
+                           border-radius: 1px;
+                           margin-right:4px;
+                           color:#acdbf5; 
+                           text-align:center;
+                       }
+                   }
+               }
+               .no-margin{
+                   margin:0;
+               }
+           }
+           .left_Arrow{
                         width:45px;
                         height:108px;
                         background:linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
                         position:absolute;
                         left:-46px;
-                        top:136px;
+                        top:73px;
                         cursor:pointer;
                         span{
                             display:block;
@@ -518,8 +1316,8 @@ html{
                         height:108px;
                         background:linear-gradient( to left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
                         position:absolute;
-                        right:46px;
-                        top:136px;
+                        right:-43px;
+                        top:73px;
                         cursor:pointer;
                         span{
                             display:block;
@@ -531,18 +1329,18 @@ html{
                             cursor:pointer;
                         }
                     }
-                    .peas{
+                    .peas1{
                         position:absolute;
-                        bottom:5px;
-                        left:30%;
-                        width:940px;
+                        bottom:10px;
+                        left:47.6%;
+                        width:470px;
                         height:30px;
                         margin:0 auto;
                         div{
                             width:15px;
                             height:9px;
                             @include text_none;
-                            background-color:hsla(202,60%,100%,0.4);
+                            background-color:#49535f;
                             margin:12px 0 0 5px;
                             border-radius:2px;
                             text-align: center;
@@ -550,8 +1348,216 @@ html{
                            
                         }
                     }
-                }   
+          }
+        .updata{
+            width:940px;
+            height:450px;
+                h4{
+                    @include h4_title;
+                }
+            .updata_box{
+                 width:940px;
+                 height:410px;
+                  .words{
+                            width:368px;
+                            height:24px;
+                            background:-webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%);
+                            text-align:right;
+                            a{
+                                color:#acdbf5;
+                                padding-right:5px;
+                            }
+                        } 
+                 .updata_left_box{
+                    width:368px;
+                    height:422px;
+                     @include Dleft;
+                    img{
+                        width:368px;
+                        height:398px;
+                        display:block;
+                        cursor:pointer;
+                    }
+                  }
+                  .updata_right_box{
+                       width:550px;
+                       height:422px;
+                       @include Dleft;
+                       ul{
+                           width:100%;
+                           height:422px;
+                           li{
+                              width:173px;
+                              height:180px;
+                              margin-left:10px;
+                              @include Dleft;
+                              img{
+                                  width:100%;
+                                  height:100%;
+                                  display:block;
+                                  cursor:pointer;
+                              }
+                              .words{
+                                  width:173px;
+                              } 
+                           }
+                            .margin_li{
+                                  margin-top:37px;
+                              } 
+                        }
+                  }   
+                }
             }
         }
-    }
+   }
 }
+/*--------------------------main style-------------------------------------*/
+
+/*--------------------------footer style-------------------------------------*/
+#footer{
+   width:100%;
+   height:400px;
+   .footer_top{
+       background:#000;
+       height:260px;
+       text-align:center;
+       .recommed{
+        width:950px;
+        height:31px;
+        padding:30px 0;
+        margin-left:273px;
+        background:url(../img/logo_icon/line.png)repeat-x center center;
+            span{
+                background:#000;
+                font-family: "Motiva Sans", Sans-serif;
+                font-weight: 300;
+                font-weight: normal;
+                font-size: 24px;
+                color: #67c1f5;
+                text-align: center;  
+            }  
+        }
+        p{
+            background: rgba( 0, 0, 0, 0.2 );
+            width: 908px;
+            height:20px;
+            padding: 16px;
+            text-align:center;
+            font-size: 15px;
+            color: #8f98a0;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: 300;
+            font-weight: normal;
+            margin-left:273px;
+            a{
+                color:#fff;
+                font-size:15px;
+                
+            }
+        }
+        .btn{
+                text-align:center;
+            input[type="button"]{
+                width:66px;
+                height:36px;
+                background:linear-gradient( to bottom, #a4d007 5%, #536904 95%);
+                border-radius:4px;
+                border:2px solid #172030;
+                display:block;
+                font-size:15px;
+                color:rgba(210,232,133,1);
+                text-align:center;
+                margin-left:46.5%;
+                cursor:pointer;
+            }
+        }
+   }
+   .footer_bottom{
+       width:100%;
+       height:140px;
+       background:#101822;
+       .logo{
+           margin:46px 0 0 275px;
+           width:92px;
+           height:26px;
+           @include Dleft;
+           img{
+               width:100%;
+               height:100%;
+           }
+       }
+       .copyright{
+           width:630px;
+           height:50px;
+           color:#8F98A0;
+           font-size:12px;
+           text-align:left;
+           padding:42px 0 0 10px;
+           @include Dleft;
+           .p2{
+               height:18px;
+               width:210px;
+               @include Dleft;
+            }
+       }
+       .copyright_nav{
+          @include Dleft;
+          width:350px;
+          height:14px;
+          li{
+              @include Dleft;
+              width:68px;
+              height:14px;
+              text-align:center;
+          }
+          .long{
+              width:105px;
+          }
+          .no-margin{
+              margin:0;
+              width:40px;
+          }
+          a:hover{
+              color:#fff;
+          }
+          a{
+              color:#8b98a0;
+              display:block;
+              border-right:1px solid #384959;
+              padding_right:5px;
+          }
+          .no-border{border:none;}
+       }
+       .footer_nav{
+            margin-top: 8px;
+            float: left;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+            font-size: 13px;
+            color: #61686D;
+            margin:8px 0 0 273px;
+            li{
+                @include Dleft;
+                padding:0 8px;
+                border-right:1px solid #B5B6B8;
+            }
+            .no-border{border:none;}
+            a:hover{
+                color:#fff;
+            }
+            .facebook{
+                width:16px;
+                height:16px;
+                background:url(../img/logo_icon/ico_facebook.gif)no-repeat center center;
+                @include text_none;
+            }
+            .twitter{
+                width:16px;
+                height:16px;
+                background:url(../img/logo_icon/ico_twitter.gif)no-repeat center center;
+                @include text_none;
+            }
+       }   
+   } 
+}
+/*--------------------------footer style-------------------------------------*/
