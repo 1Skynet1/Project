@@ -1,0 +1,47 @@
+/*--------------------------default style-------------------------------------*/
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+a { text-decoration: none; color: #b5b6b8; font-size: 13px; }
+
+em, i, strong, b, h1, h2, h3, h4, h5, h6 { font-style: normal; }
+
+/*--------------------------default style-------------------------------------*/
+html { width: 100%; }
+
+body { width: 100%; min-width: 1440px; overflow: auto; }
+
+/*--------------------------main style-------------------------------------*/
+#main { width: 100%; height: 1226px; position: relative; background: linear-gradient(to bottom, #2a465c 5%, #1b2838 95%); }
+#main .main_content .homePage { width: 940px; height: 18px; color: #56707f; padding-top: 20px; line-height: 12px; }
+#main .main_content .homePage a { font-size: 12px; font-family: "Motiva Sans", Sans-serif; font-weight: normal; }
+#main .main_content .JoinAs { height: 40px; line-height: 40px; font-size: 30px; color: #d6d7d8; margin-bottom: 16px; font-weight: normal; }
+#main .main_content .Box_content { width: 950px; height: 970px; }
+#main .main_content .Box_content .Sign_box { position: relative; width: 618px; height: 970px; background: #13364c; float: left; }
+#main .main_content .Box_content .Sign_box input[type="text"], #main .main_content .Box_content .Sign_box input[type="password"] { display: inline; width: 269px; height: 24px; border: 1px solid #000; background: #0e283a; border-radius: 4px; margin-left: 17px; box-shadow: 1px 1px 0px #45556c; color: #FFF; }
+#main .main_content .Box_content .Sign_box .text_name { width: 200px; font-size: 11px; color: #c6d4df; display: block; padding: 9px 0 2px 17px; font-family: Arial, Helvetica, sans-serif; }
+#main .main_content .Box_content .Sign_box .text_email { width: 310px; height: 28px; font-size: 11px; color: #c6d4df; display: inline-block; padding: 0 0 3px 10px; vertical-align: middle; font-family: Arial, Helvetica, sans-serif; }
+#main .main_content .Box_content .Sign_box .rule { border-top: 1px solid #38444e; width: 584px; margin: 15px auto; }
+#main .main_content .Box_content .Sign_box .checkcord { width: 400px; height: 100px; }
+#main .main_content .Box_content .Sign_box .checkcord img { margin-left: 17px; }
+#main .main_content .Box_content .Sign_box #change { display: inline; cursor: pointer; }
+#main .main_content .Box_content .Sign_box .reading { width: 600px; padding: 0 0 8px 17px; }
+#main .main_content .Box_content .Sign_box .Protocol_content { width: 584px; height: 375px; overflow-x: hidden; margin: 0 auto; border: 1px solid #c6d4df; }
+#main .main_content .Box_content .Sign_box .Protocol_content h4 { margin: 10px 0 10px 5px; color: #ffffff; font-size: 22px; font-family: "Motiva Sans", Sans-serif; font-weight: normal; }
+#main .main_content .Box_content .Sign_box .Protocol_content p { margin: 9px 5px; font-family: Arial, Helvetica, sans-serif; color: #c6d4df; font-size: 12px; }
+#main .main_content .Box_content .Sign_box #i_agree { margin: 7px 0 0 17px; }
+#main .main_content .Box_content .Sign_box .agree { display: inline; vertical-align: middle; padding: 0; line-height: 13px; }
+#main .main_content .Box_content .Sign_box .valve { color: #fff; font-size: 12px; display: block; margin: 15px 0 0 17px; cursor: pointer; }
+#main .main_content .Box_content .Sign_box .valve:hover { color: #66c0f4; }
+#main .main_content .Box_content .Sign_box input[type="button"] { width: 110px; height: 32px; display: block; border-radius: 2px; border: none; padding: 1px; display: inline-block; cursor: pointer; color: #67c1f5; background: rgba(103, 193, 245, 0.2); position: absolute; right: 15px; bottom: 30px; }
+#main .main_content .Box_content .Sign_box input[type="button"]:hover { background: linear-gradient(to right, #6FAEE0 5%, #2C93E4 95%); color: #fff; }
+#main .main_content .Box_content .why_join_Steam { position: relative; width: 308px; height: 580px; background: #1A3D56; float: right; }
+#main .main_content .Box_content .why_join_Steam h3 { width: 285px; height: 30px; font-weight: normal; font-size: 18px; color: #67c1f5; padding: 16px 0 5px 17px; }
+#main .main_content .Box_content .why_join_Steam li { font-size: 11px; color: #c6d4df; display: block; padding: 0 0 5px 13px; list-style: disc; }
+#main .main_content .Box_content .why_join_Steam img { text-align: center; border: none; margin-left: 15px; }
+#main .main_content .Box_content .why_join_Steam .more_about_Steam { position: absolute; left: 0; bottom: -23px; }
+#main .main_content .Box_content .why_join_Steam .more_about_Steam a:hover { color: #3893D2; }
+#main .main_content .Box_content .why_join_Steam .System_req span { font-family: Arial, Helvetica, sans-serif; color: #c6d4df; font-size: 12px; margin-left: 15px; }
+
+/*# sourceMappingURL=Sign_page.css.map */

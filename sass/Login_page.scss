@@ -1,0 +1,176 @@
+@charset "utf-8";
+$headerBgcolor:#171a21;
+$main_top_color:#1b2838;
+$main_bottom_color:#23384d;
+$footer_top_color:#000000;
+$footer_bottom_color:#101922;
+$Def_font_size:13px;
+$Def_font_family:"Microsoft Yahei";
+$A_def_color:#b5b6b8;
+$Def_hover_color:#fff;
+$list_nav_color:#84b6d9;
+@mixin Dleft{
+        float: left;    
+};
+@mixin Dright{
+        float: right;    
+};
+@mixin margin_this{
+        margin:0 auto;  
+};
+@mixin text_none{
+    text-indent: -1000px;
+    overflow: hidden;
+    float: left;
+}
+/*--------------------------default style-------------------------------------*/
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color:$A_def_color;font-size:$Def_font_size}
+em,i,strong,b,h1,h2,h3,h4,h5,h6{font-style: normal;}
+/*--------------------------default style-------------------------------------*/
+html{
+    width:100%;
+ 
+}
+ body{
+      
+      width:100%;
+      min-width:1440px;
+      overflow:auto;
+
+}
+/*--------------------------main style-------------------------------------*/
+#main{
+    width:100%;
+    height:660px;
+    position:relative;
+    background:linear-gradient(to bottom, #2a465c 5%, #1b2838 95%);
+    .box_content{
+        height:386px;
+         h3{ 
+                width:285px;
+                height:30px;
+                font-weight: normal;
+                font-size:18px;
+                color:#67c1f5;
+                padding:19px 0 5px 17px; 
+            }
+        .login_box{
+            width:620px;
+            height:384px;
+            background:#1A3D56;
+            margin-top:17px;
+             @include Dleft;
+            .msg{
+                font-size:11px;
+                color:#c6d4df;
+                display:block;
+                padding:0 0 13px 17px;
+            }
+             input[type="button"]{
+                   width:62px;
+                   height:32px;
+                   display:block;
+                    border-radius: 2px;
+                    border: none;
+                    padding: 1px;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: #67c1f5;
+                    background: rgba( 103, 193, 245, 0.2 );
+                    margin:53px 0 0 15px;
+               }
+                input[type="button"]:hover{
+                    background:linear-gradient(to right, #6FAEE0 5%, #2C93E4 95%);
+                    color:#fff;
+                }
+            .login_left_box{
+                width:308px;
+                height:385px;
+                @include Dleft;
+               .username,.userPass{
+                    font-size:11px;
+                    color:#c6d4df;
+                    display:block;
+                    padding:0 0 3px 17px;
+                    font-family:Arial, Helvetica, sans-serif;
+               }
+               input[type="text"],input[type="password"]{
+                   display:block;
+                   width:269px;
+                   height:24px;
+                   border:1px solid #000;
+                   background:#0e283a;
+                   border-radius:4px;
+                   margin-left:17px;
+                   box-shadow: 1px 1px 0px #45556c;
+                   color:#FFF;
+               }
+               .userPass{
+                   margin-top:20px;
+               }
+            }
+            .line{
+                border-left: 1px solid #38444e;
+                width: 2px;
+                height: 210px;
+                margin: 0px;
+                float: left;
+            }
+            .right_sign_box{
+                width:308px;
+                height:385px;
+                @include Dleft;
+                p{
+                   font-size:11px;
+                   color:#c6d4df;
+                   display:block;
+                   padding:0 0 3px 17px;
+                   font-family:Arial, Helvetica, sans-serif; 
+                }
+                input[type="button"]{
+                    width:110px;
+                    margin:128px 0 0 15px;
+                }
+            }
+            .lost_pass{
+                color:#000;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;  
+                margin-top:10px;
+                a:hover{
+                    color:#3893D2;
+                }
+            }
+        }
+        .why_join_Steam{
+            position:relative;
+            width:308px;
+            height:384px;
+            background:#1A3D56;
+            margin-top:17px;
+            @include Dright;
+            li{
+                font-size:11px;
+                color:#c6d4df;
+                display:block;
+                padding:0 0 5px 13px;
+                list-style:disc;
+            }
+            img{
+                text-align:center;
+                border:none;
+                margin-left:15px;
+            }
+            .more_about_Steam{
+                position:absolute;
+                left:0;
+                bottom:-23px;
+                a:hover{
+                    color:#3893D2;
+                }
+            }
+        }
+    }
+}

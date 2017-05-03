@@ -1,0 +1,232 @@
+@charset "utf-8";
+$headerBgcolor:#171a21;
+$main_top_color:#1b2838;
+$main_bottom_color:#23384d;
+$footer_top_color:#000000;
+$footer_bottom_color:#101922;
+$Def_font_size:13px;
+$Def_font_family:"Microsoft Yahei";
+$A_def_color:#b5b6b8;
+$Def_hover_color:#fff;
+$list_nav_color:#84b6d9;
+@mixin Dleft{
+        float: left;    
+};
+@mixin Dright{
+        float: right;    
+};
+@mixin margin_this{
+        margin:0 auto;  
+};
+@mixin text_none{
+    text-indent: -1000px;
+    overflow: hidden;
+    float: left;
+}
+/*--------------------------default style-------------------------------------*/
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary{margin:0;padding:0;}
+li{list-style: none;}
+a{text-decoration: none;color:$A_def_color;font-size:$Def_font_size}
+em,i,strong,b,h1,h2,h3,h4,h5,h6{font-style: normal;}
+/*--------------------------default style-------------------------------------*/
+html{
+    width:100%;
+ 
+}
+ body{
+      
+      width:100%;
+      min-width:1440px;
+      overflow:auto;
+
+}
+/*--------------------------main style-------------------------------------*/
+#main{
+     width:100%;
+    height:1226px;
+    position:relative;
+    background:linear-gradient(to bottom, #2a465c 5%, #1b2838 95%);
+    .main_content{
+        .homePage{
+            width:940px;
+            height:18px;
+            color: #56707f;
+            padding-top:20px;
+            line-height:12px;
+            a{
+                font-size: 12px;
+                font-family: "Motiva Sans", Sans-serif;
+                font-weight: normal;  
+            }
+        }
+        .JoinAs{
+            height: 40px;
+            line-height: 40px; 
+            font-size: 30px;
+            color: #d6d7d8;
+            margin-bottom: 16px;
+            font-weight:normal;
+        }
+        .Box_content{
+            width:950px;
+            height:970px;
+           .Sign_box{
+               position:relative;
+               width:618px;
+               height:970px;
+               background:#13364c;
+               @include Dleft;
+             input[type="text"],input[type="password"]{
+                   display:inline;
+                   width:269px;
+                   height:24px;
+                   border:1px solid #000;
+                   background:#0e283a;
+                   border-radius:4px;
+                   margin-left:17px;
+                   box-shadow: 1px 1px 0px #45556c;
+                   color:#FFF;
+               }
+               .text_name{
+                   width:200px;
+                    font-size:11px;
+                    color:#c6d4df;
+                    display:block;
+                    padding:9px 0 2px 17px;
+                    font-family:Arial, Helvetica, sans-serif;
+               }
+               .text_email{
+                   width:310px;
+                   height:28px;
+                   font-size:11px;
+                    color:#c6d4df;
+                    display:inline-block;
+                    padding:0 0 3px 10px;
+                    vertical-align: middle;
+                    font-family:Arial, Helvetica, sans-serif;
+               }
+               .rule{
+                    border-top: 1px solid #38444e;
+                     width:584px;
+                     margin:15px auto;
+               }
+               .checkcord{
+                   width:400px;
+                   height:100px;
+                   img{
+                       margin-left:17px;
+                   }
+               }
+               #change{
+                   display:inline;
+                   cursor:pointer;
+               }
+               .reading{
+                   width:600px;
+                   padding:0 0 8px 17px;
+               }
+               .Protocol_content{
+                   width:584px;
+                   height:375px;
+                   overflow-x:hidden;
+                   margin:0 auto;
+                   border:1px solid #c6d4df;
+                   h4{
+                        margin:10px 0 10px 5px;
+                        color: #ffffff;
+                        font-size: 22px;
+                        font-family: "Motiva Sans", Sans-serif;
+                        font-weight: normal;
+                   }
+                   p{
+                        margin: 9px 5px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: #c6d4df;
+                        font-size: 12px;
+                   }
+               }
+               #i_agree{
+                   margin:7px 0 0 17px;  
+               }
+                .agree{
+                       display:inline;
+                       vertical-align:middle;
+                       padding:0;
+                       line-height:13px;
+                   }
+                    .valve{
+                     color:#fff;
+                     font-size:12px;
+                     display: block;
+                     margin:15px 0 0 17px;
+                     cursor:pointer;
+                   }
+                   .valve:hover{
+                       color:#66c0f4;
+                   }
+               input[type="button"]{
+                        width: 110px;
+                        height: 32px;
+                        display: block;
+                        border-radius: 2px;
+                        border: none;
+                        padding: 1px;
+                        display: inline-block;
+                        cursor: pointer;
+                        color: #67c1f5;
+                        background: rgba(103, 193, 245, 0.2);
+                        position: absolute;
+                        right:15px;
+                        bottom:30px;
+               }
+                input[type="button"]:hover{
+                    background:linear-gradient(to right, #6FAEE0 5%, #2C93E4 95%);
+                    color:#fff;
+                }   
+           }
+           .why_join_Steam{
+            position:relative;
+            width:308px;
+            height:580px;
+            background:#1A3D56;
+            @include Dright;
+            h3{
+                 width:285px;
+                height:30px;
+                font-weight: normal;
+                font-size:18px;
+                color:#67c1f5;
+                padding:16px 0 5px 17px; 
+            }
+            li{
+                font-size:11px;
+                color:#c6d4df;
+                display:block;
+                padding:0 0 5px 13px;
+                list-style:disc;
+            }
+            img{
+                text-align:center;
+                border:none;
+                margin-left:15px;
+            }
+            .more_about_Steam{
+                position:absolute;
+                left:0;
+                bottom:-23px;
+                a:hover{
+                    color:#3893D2;
+                }
+            }
+            .System_req{
+                span{
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: #c6d4df;
+                    font-size: 12px;
+                    margin-left:15px;
+                }
+            }
+        }
+      }
+    }
+}
